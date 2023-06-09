@@ -1,6 +1,6 @@
-@import 'fonts.scss';
-@import 'null.scss';
-@import 'var.scss';
+@import './fonts';
+@import './null';
+@import './var';
 
 .wrapper {
     display: flex;
