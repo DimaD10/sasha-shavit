@@ -26,6 +26,15 @@ a, button {
     -webkit-tap-highlight-color: transparent;
 }
 
+input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
+
 body {
     font-family: Gilroy;
     font-weight: 400;
@@ -42,6 +51,12 @@ body {
     font-weight: 600;
     font-size: 40px;
     line-height: 120%;
+    color: $grey;
+}
+.paragraph {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
     color: $grey;
 }
 .button-dark, .button-light {
