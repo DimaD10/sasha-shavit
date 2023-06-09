@@ -766,6 +766,7 @@
         font-weight: 400;
         font-size: 18px;
         padding: 20px 0;
+        border-radius: 0px;
 
         @media (max-width: 991.98px) {
             padding-top: calc(8px + (20 - 8) * ( (100vw - 320px) / (991.98 - 320)));
