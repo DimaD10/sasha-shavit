@@ -1,3 +1,4 @@
+@import 'fonts.scss';
 @import 'null.scss';
 @import 'var.scss';
 
@@ -42,8 +43,6 @@ body {
     font-size: 40px;
     line-height: 120%;
     color: $grey;
-}
-.paragraph {
 }
 .button-dark, .button-light {
     padding: 0 100px;
