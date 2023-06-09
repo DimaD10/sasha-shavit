@@ -1,0 +1,81 @@
+@import 'null.scss';
+@import 'var.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    position: relative;
+}
+
+[class*="__container"] {
+    max-width: 1412px;
+    padding: 0 30px;
+
+    @media (max-width: 480px) {
+        padding-left: calc(25px + (30 - 25) * ( (100vw - 320px) / (480 - 320)));
+        padding-right: calc(25px + (30 - 25) * ( (100vw - 320px) / (480 - 320)));
+        max-width: calc(1402px + (1412 - 1402) * ( (100vw - 320px) / (480 - 320)));
+    }
+    margin: 0 auto;
+}
+
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: Gilroy;
+    font-weight: 400;
+}
+
+.main {
+    flex: 1 1 auto;
+    //min-height: 1200px;
+}
+
+
+
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: $grey;
+}
+.paragraph {
+}
+.button-dark, .button-light {
+    padding: 0 100px;
+    @media (max-width: 1500px) {
+        padding-left: calc(20px + (100 - 20) * ( (100vw - 320px) / (1500 - 320)));
+        padding-right: calc(20px + (100 - 20) * ( (100vw - 320px) / (1500 - 320)));
+    }
+    height: 70px;
+    @media (max-width: 1200px) {
+        height: calc(64px + (70 - 64) * ( (100vw - 320px) / (1200 - 320)));
+        font-size: calc(20px + (24 - 20) * ( (100vw - 320px) / (1200 - 320)));
+    }
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 7px;
+
+    transition: background-color ease-in-out $animSpeed;
+}
+
+.button-dark {
+    background-color: $dark-blue;
+    color: $white;
+
+    &:hover {
+        background-color: #2a4a70;
+    }
+}
+.button-light {
+    background-color: $white;
+    color: $dark-blue;
+
+    &:hover {
+        background-color: #f7f7f7;
+    }
+}
