@@ -597,6 +597,52 @@ body {
           transform: rotate(45deg) translate(-3px, -4px);
 }
 
+@media (min-width: 767.98px) {
+  .header.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: top ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+    transition: top ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+    transition: transform ease-in-out 0.2s, top ease-in-out 0.2s;
+    transition: transform ease-in-out 0.2s, top ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+    -webkit-animation: hideHeader linear 0.2s;
+            animation: hideHeader linear 0.2s;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .header.show-header {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 10px;
+  }
+}
+
+@-webkit-keyframes hideHeader {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes hideHeader {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 .main__hero {
   padding: 20px;
 }
