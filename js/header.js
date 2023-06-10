@@ -1,5 +1,4 @@
 const header = document.querySelector(".header");
-const main = document.querySelector('main');
 
 window.addEventListener("scroll", checkScroll);
 document.addEventListener("DOMContentLoaded", checkScroll);
