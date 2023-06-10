@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sasha Shavit</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
     <link rel="icon" href="./img/logo-ico.svg">
 </head>
 <body>
@@ -72,255 +72,130 @@
             </div>
         </header>
         <main class="main">
-            <section class="main__hero hero control-header">
-                <div class="hero__wrapper">
-                    <div class="hero__bg">
-                        <img src="./img/bg/first-screen.webp" alt="">
+            <div class="main__catalog-filter catalog-filter control-header">
+                <div class="catalog-filter__container">
+                    <div class="catalog-filter__search search-filter">
+                        <h2 class="catalog-filter__title">Selected Your Destination</h2>
+                        <input type="text" class="catalog-filter__input" placeholder="Test Address">
                     </div>
-                    <div class="hero__decor">
-                        <img src="./img/bg/first-screen-decor.webp" alt="">
-                    </div>    
 
-                    
-                    <div class="hero__content hero-article">
-                        <div class="hero__container">
-                            <div class="hero-article__body">
-                                <div class="hero-article__article">
-                                    <h1 class="hero-article__title title">Shavit Group <br>Real Estate</h1>
-                                    <p class="hero-article__paragraph paragraph">
-                                        Shavit Group is a leading real estate team<br> with Century 21 GAVISH. Our main goal is to <br>provide you with REAL value
-                                    </p>
-                                </div>
-
-                                <div class="hero-article__buttons">
-                                    <button class="hero-article__button button-dark">Buy a house</button>
-                                    <button class="hero-article__button button-light">Sell a house</button>
-                                </div>
+                    <div class="catalog-filter__price price-filter">
+                        <div class="price-filter__field">
+                            <label for="price-from" class="price-filter__label">min price</label>
+                            <div class="price-filter__field-wrapper">
+                                <label for="price-from" class="price-text">
+                                    <span>from </span>
+                                    <span class="price-text__currency">$</span>
+                                </label>
+                                <input type="text" id="price-from" class="price-filter__input" value="1000">
+                            </div>
+                        </div>
+                        <div class="price-filter__field">
+                            <label for="price-to" class="price-filter__label">max price</label>
+                            <div class="price-filter__field-wrapper">
+                                <label for="price-to" class="price-text">
+                                    <span>to </span>
+                                    <span class="price-text__currency">$</span>
+                                </label>
+                                <input type="text" id="price-to" class="price-filter__input" value="5000">
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section class="main__filter filter">
-                <div class="filter__container">
-                    <h2 class="filter__title title">Filter</h2>
-                    <div class="filter-slider">
-                        <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
+                    <div class="catalog-filter__category category-filter">
+                        <h2 class="catalog-filter__title">Filter</h2>
+                        <div class="category-filter__select select">
+                            <div class="select__header">
+                                <div class="select__current">All</div>
+                                <div class="select__icon">
+                                    <img src="./img/icon/select-icon.svg" alt="">
                                 </div>
-                                <h3 class="filter-card__title" title="Summerlin">Summerlin</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img2.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="Henderson">Henderson</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="North Las Vegas">North Las Vegas</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img2.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="High Rise Condos">High Rise Condos</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="Luxury">Luxury</h3>
-                            </a>
-
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="Summerlin">Summerlin</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img2.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="Henderson">Henderson</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="North Las Vegas">North Las Vegas</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img2.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="High Rise Condos">High Rise Condos</h3>
-                            </a>
-                            <a href="#" class="swiper-slide filter-card">
-                                <div class="filter-card__preview">
-                                    <img src="./img/filter/img.webp" alt="">
-                                </div>
-                                <h3 class="filter-card__title" title="Luxury">Luxury</h3>
-                            </a>
+                            </div>
+                            <div class="select__body">
+                                <div class="select__item">All</div>
+                                <div class="select__item">Appartment</div>
+                                <div class="select__item">Houses</div>
+                                <div class="select__item">Villa</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section class="main__featured featured">
+                    <button class="catalog-filter__sort" title="Sort list">
+                        <img src="./img/icon/sort-icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <section class="main__featured featured featured_list">
                 <div class="featured__container">
                     <h2 class="featured__title title">Featured</h2>
-                    <div class="featured-slider">
-                        <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
+                    <div class="featured__list">
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
                             </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide featured-card">
-                                <div class="featured-card__preview">
-                                    <img src="./img/featured/img.webp" alt="">
-                                </div>
-                                <div class="featured-card__body">
-                                    <span class="featured-card__subtitle">Adress</span>
-                                    <h3 class="featured-card__title" title="Mecaw House">Mecaw House</h3>
-                                    <span class="featured-card__price">$10,000,000</span>
-                                </div>
-                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main__meet meet">
-                <div class="meet__container">
-                    <div class="meet__content">
-                        <div class="meet-article">
-                            <h2 class="meet__title title">Stop searching, start owning</h2>
-                            <p class="meet__paragraph paragraph">
-                                Summer’s housing bidding WARS Are about to Begin! Book a meeting with your Favorite Realtor Sasha Shavit <br><span class="bold">Coffee's on ME!</span>
-                            </p>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
                         </div>
-                        <form class="meet-form">
-                            <input type="text" class="meet-form__input" placeholder="Name">
-                            <input type="email" class="meet-form__input" placeholder="Email">
-                            <input type="number" class="meet-form__input" placeholder="Phone number">
-
-                            <button class="meet-form__button button-dark">Let’s go</button>
-                        </form>
-                    </div>
-                    <div class="meet-preview">
-                        <div class="meet-preview__image">
-                            <img src="./img/meet/sasha.webp" alt="">
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
                         </div>
-                        <div class="meet-article">
-                            <h2 class="meet__title title">Sasha Shavit</h2>
-                            <p class="meet__paragraph paragraph">
-                                Book a meeting with your Favorite Realtor Sasha Shavit <br><span class="bold">Coffee's on ME!</span>
-                            </p>
-                            <a href="tel:+17029109163" class="meet__contact">+1(702) 910 - 9163</a>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main__summary summary">
-                <div class="summary__container">
-                    <div class="summary-preview">
-                        <div class="summary-preview__image summary-preview__image_left-top"><img src="./img/poster/top-left.webp" alt=""></div>
-                        <div class="summary-preview__image summary-preview__image_right-top"><img src="./img/poster/top-right.webp" alt=""></div>
-                        <div class="summary-preview__image summary-preview__image_left-bottom"><img src="./img/poster/bottom-left.webp" alt=""></div>
-                        <div class="summary-preview__image summary-preview__image_right-bottom"><img src="./img/poster/bottom-right.webp" alt=""></div>
-                    </div>
-
-                    <div class="summary-content">
-                        <h2 class="summary__title title">Dream Home</h2>
-                        <p class="summary__paragraph paragraph">
-                            <span class="bold">Representation:</span> I am advocating for you during the purchase process, ensuring that your interests are protected
-                        </p>
-                        <p class="summary__paragraph paragraph">
-                            <span class="bold">Negotiations:</span> I am experienced negotiator and can help you get the best deal on the house you want.
-                        </p>
-                        <p class="summary__paragraph paragraph">
-                            <span class="bold">Guidance:</span> I will provide invaluable advice throughout the entire process, from financing to inspections to closing
-                        </p>
-                        <p class="summary__paragraph paragraph">
-                            <span class="bold">Expert Knowledge:</span> I have in-depth knowledge of the local market, including knowledge of the most desirable properties and neighborhoods, trends in home prices, and the availability of financing options
-                        </p>
-
-                        <button class="summary-content__button button-dark">Let’s go</button>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -328,24 +203,104 @@
             <section class="main__sell-card sell-card">
                 <div class="sell-card__container">
                     <div class="sell-card__wrapper">
-                        <div class="sell-card__decor">
-                            <img src="./img/decor1.webp" alt="">
-                        </div>
                         <div class="sell-card__card sell-window">
                             <div class="sell-window__decor-orange"></div>
                             <div class="sell-window__decor-blue"></div>
 
                             <div class="sell-window__wrapper">
                                 <div class="sell-window__article">
-                                    <h2 class="sell-window__title title">Sell your home with me <br> for top dollar fast!</h2>
-                                    <p class="sell-window__paragraph paragraph">Put your email address and get listed</p>
+                                    <h2 class="sell-window__title title">Do you want to schedule a meeting?</h2>
+                                    <p class="sell-window__paragraph paragraph">Make an appointment and get answers to all your questions.</p>
 
-                                    <div class="sell-search">
-                                        <input type="text" class="sell-search__input" placeholder="Enter your email">
-                                        <button class="sell-search__button button-dark">Send</button>
-                                    </div>
+                                    <form class="sell-form">
+                                        <div class="sell-form__body">
+                                            <div class="sell-form__field">
+                                                <label for="user-number" class="sell-form__label">Phone number</label>
+                                                <input type="number" id="user-number" class="sell-form__input" placeholder="(000) 000-000">
+                                            </div>
+                                            <div class="sell-form__field">
+                                                <label for="date" class="sell-form__label">Date of the meetingr</label>
+                                                <input type="date" id="date" class="sell-form__input" value="2023-01-01">
+                                            </div>
+                                        </div>
+
+                                        <button class="sell-form__button button-dark">Send</button>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__featured featured featured_list">
+                <div class="featured__container">
+                    <div class="featured__list">
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
+                        </div>
+                        <div class="featured-card">
+                            <a href="#" class="featured-card__preview">
+                                <img src="./img/featured/img.webp" alt="">
+                            </a>
+                            <div class="featured-card__body">
+                                <span class="featured-card__subtitle">Adress</span>
+                                <a href="#" class="featured-card__title" title="Mecaw House">Mecaw House</a>
+                                <span class="featured-card__price">$10,000,000</span>
+                            </div>
+                            <button class="featured-card__button">Schedule tour</button>
                         </div>
                     </div>
                 </div>
@@ -457,8 +412,6 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/slider.js"></script>
     <script src="./js/burger.js"></script>
     <script>
         function scrollToTop() {
@@ -470,5 +423,6 @@
         }
     </script>
     <script src="./js/header.js"></script>
+    <script src="./js/select.js"></script>
 </body>
 </html>

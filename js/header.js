@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", checkScroll);
 
 function checkScroll() {
     let scrollPos = window.scrollY;
-    const controlPos = document.querySelector('.hero').offsetTop + document.querySelector('.hero').offsetHeight;
+    const controlPos = document.querySelector('.control-header').offsetTop + document.querySelector('.control-header').offsetHeight;
     const gate = 20;
 
-    if(scrollPos > 300) {
+    if(scrollPos > 140) {
         header.classList.add('fixed');
 
         if(scrollPos > controlPos + gate) {
@@ -19,6 +19,5 @@ function checkScroll() {
         }
     } else {
         header.classList.remove('fixed');
-        main.style.cssText = "padding-top: 0px;"
     }
 }

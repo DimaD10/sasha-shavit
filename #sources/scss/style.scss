@@ -259,29 +259,17 @@
     @media (min-width: 767.98px) {
         position: fixed;
         left: 0;
-        top: 0;
+        top: -120px;
         width: 100%;
-        transform: translateY(-100%);
-        transition: transform ease-in-out $animSpeed, top ease-in-out $animSpeed;
-        animation: hideHeader linear $animSpeed;
+        transition: transform ease-in-out $animSpeed;
     }
 }
 .header.show-header {
     @media (min-width: 767.98px) {
-        transform: translateY(0);
-        top: 10px;    
+        transform: translateY(130px);  
     }
 }
-@keyframes hideHeader {
-    0% {
-        opacity: 0;
-        pointer-events: none;
-    }
-    100% {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
+
 
 .main {
 
@@ -597,8 +585,61 @@
             margin-bottom: calc(24px + (50 - 24) * ( (100vw - 320px) / (1200 - 320)));
         }
     }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 118px;
+        @media (max-width: 1500px) {
+            column-gap: calc(24px + (118 - 24) * ( (100vw - 480px) / (1500 - 480)));
+        }
+        @media (max-width: 991.98px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            row-gap: calc(24px + (50 - 24) * ( (100vw - 320px) / (480 - 320)));
+        }
+        row-gap: 50px;
+
+        .featured-card {
+            width: auto;
+            display: none;
+            &:nth-child(-n + 6) {
+                display: flex;
+            }
+            @media (max-width: 991.98px) {
+                display: none;
+                &:nth-child(-n + 6) {
+                    display: none;
+                }
+                &:nth-child(-n + 4) {
+                    display: flex;
+                }
+            }
+            @media (max-width: 480px) {
+                display: none;
+                &:nth-child(-n + 4) {
+                    display: none;
+                }
+                &:nth-child(-n + 2) {
+                    display: flex;
+                }
+            }
+
+            .featured-card__preview {
+                height: 300px;
+                @media (max-width: 991.98px) {
+                    height: calc(230px + (300 - 230) * ( (100vw - 320px) / (991.98 - 320)));
+                }
+            }
+        }
+    }
 }
 .featured-card {
+    display: flex;
+    flex-direction: column;
     width: 372px;
     @media (max-width: 991.98px) {
         width: calc(190px + (372 - 190) * ( (100vw - 320px) / (991.98 - 320)));
@@ -620,8 +661,9 @@
         height: 346px;
         @media (max-width: 991.98px) {
             height: calc(180px + (346 - 180) * ( (100vw - 320px) / (991.98 - 320)));
+            border-radius: calc(10px + (20 - 10) * ( (100vw - 320px) / (991.98 - 320)));
         }
-        border-radius: 22px;
+        border-radius: 20px;
         overflow: hidden;
 
         img {
@@ -689,6 +731,36 @@
         }
         line-height: 120%;
         color: $dark-blue;
+    }
+
+    &__button {
+        margin-top: 14px;
+
+        height: 70px;
+        border-radius: 7px;
+        border: 1px solid $dark-blue;
+
+        @media (max-width: 991.98px) {
+            height: calc(60px + (70 - 60) * ( (100vw - 320px) / (991.98 - 320)));
+            font-size: calc(21px + (24 - 21) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        background-color: transparent;
+
+        font-weight: 600;
+        font-size: 24px;
+        color: $dark-blue;
+
+        transition: color ease-in-out $animSpeed, background-color ease-in-out $animSpeed;
+
+        &:hover {
+            background-color: $dark-blue;
+            color: $white;
+        }
     }
 }
 
@@ -922,10 +994,6 @@
     &__image {
         overflow: hidden;
         display: flex;
-
-        &:not(:first-child) {
-            //margin-top: 20px;
-        }
 
         img {
             width: 100%;
@@ -1194,6 +1262,100 @@
         padding: 0 30px;
         font-weight: 500;
         font-size: 16px;
+    }
+}
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    @media (max-width: 991.98px) {
+        margin-top: calc(30px + (50 - 30) * ( (100vw - 320px) / (991.98 - 320)));
+    }
+    @media (max-width: 567.98px) {
+        width: 100%;
+    }
+
+    // .sell-form__body
+
+    &__body {
+        display: flex;
+        gap: 24px;
+        @media (max-width: 567.98px) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    // .sell-form__field
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+
+        @media (max-width: 567.98px) {
+            width: 100%;
+        }
+
+        @media (max-width: 991.98px) {
+            gap: calc(4px + (14 - 4) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+    }
+
+    // .sell-form__label
+
+    &__label {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: $grey;
+
+        @media (max-width: 991.98px) {
+            font-size: calc(16px + (20 - 16) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+    }
+
+    // .sell-form__input
+
+    &__input {
+        border: 1px solid $grey;
+        height: 70px;
+        @media (max-width: 991.98px) {
+            height: calc(60px + (70 - 60) * ( (100vw - 320px) / (991.98 - 320)));
+            font-size: calc(16px + (18 - 16) * ( (100vw - 320px) / (991.98 - 320)));
+
+            padding-left: calc(4px + (30 - 4) * ( (100vw - 320px) / (991.98 - 320)));
+            padding-right: calc(4px + (30 - 4) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+        text-align: center;
+        border-radius: 8px;
+        padding: 0 34px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        color: #AEAEAE;
+
+        &::placeholder {
+            color: #AEAEAE;
+        }
+
+        @media (max-width: 567.98px) {
+            width: 100%;
+        }
+    }
+
+    // .sell-form__button
+
+    &__button {
+        margin-top: 24px;
+
+        @media (max-width: 567.98px) {
+            width: 100%;
+        }
     }
 }
 
