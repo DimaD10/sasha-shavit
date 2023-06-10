@@ -4,7 +4,6 @@ const main = document.querySelector('main');
 window.addEventListener("scroll", checkScroll);
 document.addEventListener("DOMContentLoaded", checkScroll);
 
-
 function checkScroll() {
     let scrollPos = window.scrollY;
     const controlPos = document.querySelector('.hero').offsetTop + document.querySelector('.hero').offsetHeight;
