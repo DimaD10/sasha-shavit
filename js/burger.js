@@ -5,10 +5,12 @@ document.addEventListener('click', e => {
         e.target.closest('.burger-btn').classList.toggle('active');
         burgerMenu.classList.toggle('_opened');
 
-        if (e.target.closest('.burger-btn').classList.contains('active')) {
+        if (burgerMenu.classList.contains('_opened')) {
             document.querySelector('body').style.overflow = 'hidden';
+            document.querySelector('.wrapper').style.overflow = 'hidden';
         } else {
             document.querySelector('body').style.overflow = 'visible';
+            document.querySelector('.wrapper').style.overflow = 'visible';
         }
     }
 })
