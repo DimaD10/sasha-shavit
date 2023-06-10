@@ -1,4 +1,5 @@
 const header = document.querySelector(".header");
+
 window.addEventListener("scroll", checkScroll);
 document.addEventListener("DOMContentLoaded", checkScroll);
 
@@ -18,4 +19,6 @@ function checkScroll() {
     } else {
         header.classList.remove('fixed');
     }
+
+    console.log(scrollPos);
 }
