@@ -19,4 +19,6 @@ function checkScroll() {
     } else {
         header.classList.remove('fixed');
     }
+
+    console.log(scrollPos);
 }
