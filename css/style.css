@@ -2251,12 +2251,12 @@ body {
 }
 @media (max-width: 1200px) {
   .popup {
-    padding-top: calc(24px + 46 * (100vw - 320px) / 880) !important;
-    padding-bottom: calc(24px + 46 * (100vw - 320px) / 880) !important;
+    padding-top: calc(12px + 58 * (100vw - 320px) / 880) !important;
+    padding-bottom: calc(12px + 58 * (100vw - 320px) / 880) !important;
     padding-left: calc(28px + 2 * (100vw - 320px) / 880) !important;
     padding-right: calc(28px + 2 * (100vw - 320px) / 880) !important;
-    margin-top: calc(24px + 46 * (100vw - 320px) / 880) !important;
-    margin-bottom: calc(24px + 46 * (100vw - 320px) / 880) !important;
+    margin-top: calc(12px + 58 * (100vw - 320px) / 880) !important;
+    margin-bottom: calc(12px + 58 * (100vw - 320px) / 880) !important;
     border-radius: calc(6px + 8 * (100vw - 320px) / 880) !important;
   }
 }
@@ -2355,7 +2355,7 @@ body {
 @media (max-width: 991.98px) {
   .popup__meet {
     gap: calc(20px + 14 * (100vw - 320px) / 671.98);
-    margin-top: calc(25px + 25 * (100vw - 320px) / 671.98);
+    margin-top: calc(13px + 37 * (100vw - 320px) / 671.98);
     margin-bottom: calc(24px + 26 * (100vw - 320px) / 671.98);
   }
 }
@@ -2426,6 +2426,11 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (max-width: 991.98px) {
+  .popup-form__field {
+    gap: calc(7px + 7 * (100vw - 320px) / 671.98);
+  }
 }
 .popup-form__field_name {
   grid-column: 1/-1;
