@@ -102,6 +102,11 @@ h1, h2, h3, h4, h5, h6 {
 .main {
   height: 100vh;
 }
+@media (max-width: 991.98px) {
+  .main {
+    height: 100%;
+  }
+}
 
 .main__quiz {
   display: -webkit-box;
@@ -243,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   -webkit-transition: margin ease 0.4s;
   transition: margin ease 0.4s;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .quiz-content::-webkit-scrollbar {
   width: 8px;
@@ -273,9 +278,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 991.98px) {
   .quiz-content {
-    padding-top: calc(70px + 30 * (100vw - 320px) / 671.98);
-    padding-bottom: calc(30px + 70 * (100vw - 320px) / 671.98);
+    padding-top: calc(20px + 30 * (100vw - 320px) / 671.98);
+    padding-bottom: calc(20px + 30 * (100vw - 320px) / 671.98);
     margin-left: 0;
+    overflow: visible;
   }
 }
 .quiz-content .featured, .quiz-content .filter {

@@ -342,6 +342,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767.98px) {
   .product-aside__wrapper {
+    overflow: visible;
     max-width: none;
     width: 100%;
     padding-left: 0;

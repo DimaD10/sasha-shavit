@@ -4,6 +4,9 @@
 
 .main {
     height: 100vh;
+    @media (max-width: 991.98px) {
+        height: 100%;
+    }
 }
 
 .main {
@@ -145,15 +148,16 @@
 
     transition:  margin ease .4s;
 
-    padding: 100px 0;
+    padding: 50px 0;
     @media (max-width: 1400px) {
         margin-left: calc(20px + (47 - 20) * ( (100vw - 991.98px) / (1400 - 991.98)));
     }
     @media (max-width: 991.98px) {
-        padding-top: calc(70px + (100 - 70) * ( (100vw - 320px) / (991.98 - 320)));
-        padding-bottom: calc(30px + (100 - 30) * ( (100vw - 320px) / (991.98 - 320)));
+        padding-top: calc(20px + (50 - 20) * ( (100vw - 320px) / (991.98 - 320)));
+        padding-bottom: calc(20px + (50 - 20) * ( (100vw - 320px) / (991.98 - 320)));
 
         margin-left: 0;
+        overflow: visible;
     }
     .featured, .filter {
         max-width: 0px;

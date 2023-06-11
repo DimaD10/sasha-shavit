@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-a, button, .select__header, .select__item, .swiper-button-prev, .swiper-button-next, .spoiler__header {
+a, button, .select__header, .select__item, .swiper-button-prev, .swiper-button-next, .spoiler__header, .quiz-cards__card, .quiz-plans__card {
   -webkit-tap-highlight-color: transparent;
 }
 

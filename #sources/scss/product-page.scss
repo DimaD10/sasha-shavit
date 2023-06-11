@@ -203,6 +203,7 @@
             padding-left: calc(30px + (50 - 30) * ( (100vw - 767.98px) / (991.98 - 767.98)));
         }
         @media (max-width: 767.98px) {
+            overflow: visible;
             max-width: none;
             width: 100%;
             padding-left: 0;
