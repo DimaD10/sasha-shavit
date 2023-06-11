@@ -16,13 +16,10 @@
             <section class="main__quiz quiz">
                 <div class="quiz__preview quiz-preview">
                     <div class="quiz-preview__image quiz-preview__image_current">
+                        <img src="./img/quiz/sell1.webp" alt="">
+                    </div>
+                    <div class="quiz-preview__image">
                         <img src="./img/quiz/buy1.webp" alt="">
-                    </div>
-                    <div class="quiz-preview__image">
-                        <img src="./img/quiz/buy2.webp" alt="">
-                    </div>
-                    <div class="quiz-preview__image">
-                        <img src="./img/quiz/buy3.webp" alt="">
                     </div>
                     <div class="quiz-preview__image">
                         <img src="./img/quiz/buy4.webp" alt="">
@@ -45,108 +42,78 @@
                                     </p>
                                 </div>
                                 <div class="quiz-content__body">
-                                    <div class="quiz-content__section quiz-content__section_current">
+                                    <div class="quiz-content__section quiz-content__section_address quiz-content__section_current">
                                         <h2 class="quiz__question">
-                                            I want to buy a home in
+                                            What is the address of your property?
                                         </h2>
 
-                                        <div class="quiz-cards">
-                                            <div class="quiz-cards__list">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose1" name="home-in">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose2" name="home-in">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose3" name="home-in">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose4" name="home-in">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose5" name="home-in">
-                                                <input type="radio" class="quiz-cards__input" value="Summerlin" id="choose6" name="home-in">
-
-                                                <label for="choose1" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img1.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">Summerlin</span>
-                                                </label>
-                                                <label for="choose2" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img2.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">Henderson</span>
-                                                </label>
-                                                <label for="choose3" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img3.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">North Las Vegas</span>
-                                                </label>
-                                                <label for="choose4" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img4.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">High Rise Condos</span>
-                                                </label>
-                                                <label for="choose5" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img5.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">Luxury</span>
-                                                </label>
-                                                <label for="choose6" class="quiz-cards__card" data-quiz="question-next">
-                                                    <span class="quiz-cards__preview">
-                                                        <img src="./img/filter/img6.webp" alt="">
-                                                    </span>
-                                                    <span class="quiz-cards__title">$300k - $700k Las Vegas Homes</span>
-                                                </label>
+                                        <form class="popup-form popup-form_sell">
+                                            <div class="popup-form__body">
+                                                <div class="popup-form__field">
+                                                    <label for="address" class="popup-form__label"><img src="./img/icon/address-icon.svg" alt=""></label>
+                                                    <input type="text" id="address" class="popup-form__input" placeholder="TestAddress">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="quiz-content__section">
-                                        <h2 class="quiz__question">
-                                            What’s your estimated budget?
-                                        </h2>
-
-                                        <div class="quiz-range">
-                                            <div class="quiz-range__head">
-                                                <div class="quiz-range__carrency">$</div>
-                                                <div class="quiz-range__value">450000</div>
-                                            </div>
-
-                                            <div class="quiz-range__range">
-                                                <div class="quiz-range__line"></div>
-                                                <input type="range" class="quiz-range__input" value="450000" min="0" max="1000000">
-                                            </div>
-                                        </div>
+                                        </form>
 
                                         <button class="quiz__button-next button-dark" data-quiz="question-next">Next</button>
                                     </div>
                                     <div class="quiz-content__section">
                                         <h2 class="quiz__question">
-                                            When do you plan to buy?
+                                            What type of property are you selling?
                                         </h2>
 
-                                        <div class="quiz-plans">
-                                            <div class="quiz-plans__list">
-                                                <input type="radio" class="quiz-plans__input" value="Summerlin" id="plan1" name="plan-to-buy">
-                                                <input type="radio" class="quiz-plans__input" value="Summerlin" id="plan2" name="plan-to-buy">
-                                                <input type="radio" class="quiz-plans__input" value="Summerlin" id="plan3" name="plan-to-buy">
-                                                <input type="radio" class="quiz-plans__input" value="Summerlin" id="plan4" name="plan-to-buy">
+                                        <div class="quiz-cards">
+                                            <div class="quiz-cards__list">
+                                                <input type="radio" class="quiz-cards__input" value="Single-family" id="choose1" name="type-of-property">
+                                                <input type="radio" class="quiz-cards__input" value="Condo" id="choose2" name="type-of-property">
+                                                <input type="radio" class="quiz-cards__input" value="Townhouse" id="choose3" name="type-of-property">
+                                                <input type="radio" class="quiz-cards__input" value="Land / Lot" id="choose4" name="type-of-property">
+                                                <input type="radio" class="quiz-cards__input" value="Multi-Family" id="choose5" name="type-of-property">
+                                                <input type="radio" class="quiz-cards__input" value="Single-family" id="choose6" name="type-of-property">
 
-                                                <label for="plan1" class="quiz-plans__card button-dark" data-quiz="question-next">
-                                                    0-3 months
+                                                <label for="choose1" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img1.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Single-family</span>
                                                 </label>
-                                                <label for="plan2" class="quiz-plans__card button-dark" data-quiz="question-next">
-                                                    3-6 months
+                                                <label for="choose2" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img2.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Condo</span>
                                                 </label>
-                                                <label for="plan3" class="quiz-plans__card button-dark" data-quiz="question-next">
-                                                    6-12 months
+                                                <label for="choose3" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img3.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Townhouse</span>
                                                 </label>
-                                                <label for="plan4" class="quiz-plans__card button-dark" data-quiz="question-next">
-                                                    12+ months
+                                                <label for="choose4" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img4.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Land / Lot</span>
+                                                </label>
+                                                <label for="choose5" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img5.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Multi-Family</span>
+                                                </label>
+                                                <label for="choose6" class="quiz-cards__card" data-quiz="question-next">
+                                                    <span class="quiz-cards__preview">
+                                                        <img src="./img/type/img6.webp" alt="">
+                                                    </span>
+                                                    <span class="quiz-cards__title">Other</span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="quiz-content__section">
                                         <h2 class="quiz__question">
-                                            Fill out the form and start Browsing the listings!
+                                            Fill out the form below and One of our top agents will get back to you
                                         </h2>
 
                                         <form class="popup-form">

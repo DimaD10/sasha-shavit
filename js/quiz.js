@@ -1,6 +1,6 @@
-const questions = document.querySelectorAll('.quiz-content__section');
-const images = document.querySelectorAll('.quiz-preview__image');
-const quizSize = questions.length;
+let questions = document.querySelectorAll('.quiz-content__section');
+let images = document.querySelectorAll('.quiz-preview__image');
+let quizSize = questions.length;
 document.querySelector('.quiz-navigation__total-steps').textContent = quizSize;
 
 document.addEventListener('click', e => {
@@ -24,11 +24,13 @@ document.addEventListener('click', e => {
             images[nextPoint].classList.add('quiz-preview__image_current');
         } else {
             document.querySelector('.quiz').classList.add('finish');
+            document.querySelector('.main').style.height = '100%'; 
         }
     }
 
     if (e.target.dataset.quiz === 'question-prev') {
         document.querySelector('.quiz').classList.remove('finish');
+        document.querySelector('.main').style.height = '100vh'; 
 
         let points = [...document.querySelectorAll('.quiz-content__section')];
         let activePoint = document.querySelector('.quiz-content__section_current');
