@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasha Shavit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="icon" href="./img/logo-ico.svg">
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <section class="main__quiz quiz">
+                <div class="quiz__preview quiz-preview">
+                    <div class="quiz-preview__image quiz-preview__image_current">
+                        <img src="./img/quiz/buy1.webp" alt="">
+                    </div>
+                    <div class="quiz-preview__image">
+                        <img src="./img/quiz/buy2.webp" alt="">
+                    </div>
+                    <div class="quiz-preview__image">
+                        <img src="./img/quiz/buy3.webp" alt="">
+                    </div>
+                    <div class="quiz-preview__image">
+                        <img src="./img/quiz/buy4.webp" alt="">
+                    </div>
+                </div>
+                <div class="quiz__content">
+                    <div class="quiz__container">
+                        <div class="quiz__body">
+                            <div class="quiz-content">
+                                <div class="quiz-navigation">
+                                    <button class="quiz-navigation__button" data-quiz="question-prev">
+                                        <img src="./img/icon/arrow-top.svg" alt="">
+                                    </button>
+
+                                    <p class="quiz-navigation__steps">
+                                        <span>Step</span>
+                                        <span class="quiz-navigation__current-step">1</span>
+                                        <span>to</span>
+                                        <span class="quiz-navigation__total-steps">5</span>
+                                    </p>
+                                </div>
+                                <div class="quiz-content__body">
+                                    <div class="quiz-content__section quiz-content__section_current">
+                                        <span>Content 1</span>
+
+                                        <button class="quiz__button-next button-dark" data-quiz="question-next">Next</button>
+                                    </div>
+                                    <div class="quiz-content__section">
+                                        <span>Content 2</span>
+
+                                        <button class="quiz__button-next button-dark" data-quiz="question-next">Next</button>
+                                    </div>
+                                    <div class="quiz-content__section">
+                                        <span>Content 3</span>
+
+                                        <button class="quiz__button-next button-dark" data-quiz="question-next">Next</button>
+                                    </div>
+                                    <div class="quiz-content__section">
+                                        <span>Content 4</span>
+
+                                        <button class="quiz__button-next button-dark" data-quiz="question-next">Next</button>
+                                    </div>
+                                    <div class="quiz-content__section">
+                                        <span>Content 5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/quiz.js"></script>
+</body>
+</html>
