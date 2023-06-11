@@ -386,7 +386,7 @@
 }
 
 .hero-article {
-    min-height: 800px;
+    min-height: 750px;
     z-index: 999;
     @media (max-width: 991.98px) {
         min-height: 0;
@@ -564,9 +564,6 @@
         transition: color ease-in-out $animSpeed;
         margin: 14px 20px;
 
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
     }
 }
 

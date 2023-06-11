@@ -24,7 +24,7 @@
     margin: 0 auto;
 }
 
-a, button, .select__header, .select__item {
+a, button, .select__header, .select__item, .swiper-button-prev, .swiper-button-next, .spoiler__header {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -93,6 +93,41 @@ body {
 
     &:hover {
         background-color: #f7f7f7;
+    }
+}
+.stroke-button {
+    height: 70px;
+    border-radius: 7px;
+    border: 1px solid $dark-blue;
+
+    @media (max-width: 991.98px) {
+        height: calc(60px + (70 - 60) * ( (100vw - 320px) / (991.98 - 320)));
+        font-size: calc(21px + (24 - 21) * ( (100vw - 320px) / (991.98 - 320)));
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background-color: transparent;
+
+    font-weight: 600;
+    font-size: 24px;
+    color: $dark-blue;
+
+    transition: color ease-in-out $animSpeed, background-color ease-in-out $animSpeed;
+
+    path {
+        transition: fill ease-in-out $animSpeed, stroke ease-in-out $animSpeed;
+    }
+
+    &:hover {
+        background-color: $dark-blue;
+        color: $white;
+
+        path {
+            fill: $white;
+        }
     }
 }
 
@@ -187,5 +222,13 @@ body {
     }
     .select__icon {
         transform: rotate(0deg);
+    }
+}
+
+.sticky-block {
+    @media (min-width: 767.98px) {
+        position: sticky;
+        top: 0px;    
+        transition: top ease-in-out $animSpeed;
     }
 }

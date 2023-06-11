@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-a, button, .select__header, .select__item {
+a, button, .select__header, .select__item, .swiper-button-prev, .swiper-button-next, .spoiler__header {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -297,6 +297,45 @@ body {
 }
 .button-light:hover {
   background-color: #f7f7f7;
+}
+
+.stroke-button {
+  height: 70px;
+  border-radius: 7px;
+  border: 1px solid #1A2E47;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 20px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1A2E47;
+  -webkit-transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s;
+  transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s;
+}
+@media (max-width: 991.98px) {
+  .stroke-button {
+    height: calc(60px + 10 * (100vw - 320px) / 671.98);
+    font-size: calc(21px + 3 * (100vw - 320px) / 671.98);
+  }
+}
+.stroke-button path {
+  -webkit-transition: fill ease-in-out 0.2s, stroke ease-in-out 0.2s;
+  transition: fill ease-in-out 0.2s, stroke ease-in-out 0.2s;
+}
+.stroke-button:hover {
+  background-color: #1A2E47;
+  color: #FFFFFF;
+}
+.stroke-button:hover path {
+  fill: #FFFFFF;
 }
 
 .select {
@@ -398,6 +437,15 @@ body {
 .select._opened .select__icon {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+@media (min-width: 767.98px) {
+  .sticky-block {
+    position: sticky;
+    top: 0px;
+    -webkit-transition: top ease-in-out 0.2s;
+    transition: top ease-in-out 0.2s;
+  }
 }
 
 .header {
@@ -836,7 +884,7 @@ body {
 }
 
 .hero-article {
-  min-height: 800px;
+  min-height: 750px;
   z-index: 999;
 }
 @media (max-width: 991.98px) {
@@ -1020,9 +1068,6 @@ body {
   -webkit-transition: color ease-in-out 0.2s;
   transition: color ease-in-out 0.2s;
   margin: 14px 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .filter-card__title {
