@@ -75,13 +75,13 @@
 
     &__question {
         font-weight: 700;
-        font-size: 48px;
+        font-size: 42px;
         line-height: 123%;
         color: $dark-blue;
         max-width: 95vw;
 
         @media (max-width: 1200px) {
-            font-size: calc(24px + (48 - 24) * ( (100vw - 320px) / (1200 - 320)));
+            font-size: calc(24px + (42 - 24) * ( (100vw - 320px) / (1200 - 320)));
         }
     }
 }
@@ -124,37 +124,17 @@
     flex-direction: column;
     width: 100%;
     margin-left: 47px;
-    overflow: auto;
     height: 100%;
-    &::-webkit-scrollbar {
-        width: 8px;
-    } 
-    &::-webkit-scrollbar-track {
-        background: #D2E5E9;
-        border-radius: 14px ;
-
-        @media (max-width: 1200px) {    
-            border-radius: calc(6px + (14 - 6) * ( (100vw - 320px) / (1200 - 320)));
-        }
-    }
-    &::-webkit-scrollbar-thumb {
-        background: $dark-blue;
-        border-radius: 14px ;
-
-        @media (max-width: 1200px) {    
-            border-radius: calc(6px + (14 - 6) * ( (100vw - 320px) / (1200 - 320)));
-        }
-    }
 
     transition:  margin ease .4s;
 
-    padding: 50px 0;
+    padding: 30px 0;
     @media (max-width: 1400px) {
         margin-left: calc(20px + (47 - 20) * ( (100vw - 991.98px) / (1400 - 991.98)));
     }
     @media (max-width: 991.98px) {
-        padding-top: calc(20px + (50 - 20) * ( (100vw - 320px) / (991.98 - 320)));
-        padding-bottom: calc(20px + (50 - 20) * ( (100vw - 320px) / (991.98 - 320)));
+        padding-top: calc(20px + (30 - 20) * ( (100vw - 320px) / (991.98 - 320)));
+        padding-bottom: calc(20px + (30 - 20) * ( (100vw - 320px) / (991.98 - 320)));
 
         margin-left: 0;
         overflow: visible;
@@ -228,9 +208,9 @@
 .quiz-navigation {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 
     @media (max-width: 991.98px) {
         margin-bottom: calc(14px + (24 - 14) * ( (100vw - 320px) / (991.98 - 320)));
@@ -269,10 +249,10 @@
 
     &__steps {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 118%;
         @media (max-width: 991.98px) {
-            font-size: calc(16px + (24 - 16) * ( (100vw - 320px) / (991.98 - 320)));
+            font-size: calc(16px + (22 - 16) * ( (100vw - 320px) / (991.98 - 320)));
         }
 
         color: #424242;
@@ -282,7 +262,7 @@
 .quiz.finish {
     @media (min-width: 991.98px) {
         .quiz__body {
-            flex: 0 0 100%;
+            flex: 1 1 100%;
         }
         .quiz__preview {
             flex: 0 0 0%;
@@ -298,6 +278,7 @@
         position: static;
         transition-delay: .4s;
         max-width: 1340px;
+        width: calc(100vw - 60px);
         overflow: visible;
     }
     .quiz-content {
@@ -313,7 +294,7 @@
 }
 
 .quiz-cards {
-    margin-top: 50px;
+    margin-top: 30px;
 
     // .quiz-cards__list
 
@@ -324,14 +305,11 @@
         row-gap: 34px;
         column-gap: auto;
 
-        @media (max-width: 1200px) {
-            grid-template-columns: 1fr 1fr;
-        }
         @media (max-width: 991.98px) {
             grid-template-columns: 1fr 1fr 1fr;
             row-gap: calc(14px + (34 - 14) * ( (100vw - 320px) / (991.98 - 320)));
         }
-        @media (max-width: 567.98px) {
+        @media (max-width: 399.98px) {
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -358,7 +336,10 @@
                 transform: scale(1.05);
             }
         }
-        @media (max-width: 567.98px) {
+        @media (max-width: 1400px) {
+            width: calc(134px + (150 - 134) * ( (100vw - 991.98px) / (1400 - 991.98)));
+        }
+        @media (max-width: 399.98px) {
             &:nth-child(2n) {
                 margin-left: auto;
             }
@@ -366,7 +347,20 @@
         width: 150px;
 
         @media (max-width: 991.98px) {
-            width: calc(124px + (150 - 124) * ( (100vw - 320px) / (991.98 - 320)));
+            width: calc(110px + (150 - 110) * ( (100vw - 399.98px) / (991.98 - 399.98)));
+        }
+        @media (max-width: 399.98px) {
+            width: calc(110px + (130 - 110) * ( (100vw - 320px) / (399.98 - 320)));
+        }
+
+        @media (min-width: 399.98px) {
+            &:nth-child(3n-1) {
+                margin: 0 auto;
+            }
+            &:nth-child(3n) {
+                margin-left: auto;
+                margin-right: 0;
+            }
         }
     }
 
@@ -375,8 +369,14 @@
     &__preview {
         pointer-events: none;
         height: 150px;
+        @media (max-width: 1400px) {
+            height: calc(134px + (150 - 134) * ( (100vw - 991.98px) / (1400 - 991.98)));
+        }
         @media (max-width: 991.98px) {
-            height: calc(124px + (150 - 124) * ( (100vw - 320px) / (991.98 - 320)));
+            height: calc(110px + (150 - 110) * ( (100vw - 399.98px) / (991.98 - 399.98)));
+        }
+        @media (max-width: 399.98px) {
+            height: calc(110px + (130 - 110) * ( (100vw - 320px) / (399.98 - 320)));
         }
         border-radius: 14px;
         overflow: hidden;
@@ -405,9 +405,9 @@
 }
 
 .quiz-plans {
-    margin-top: 100px;
+    margin-top: 30px;
     @media (max-width: 991.98px) {
-        margin-top: calc(50px + (100 - 50) * ( (100vw - 320px) / (991.98 - 320)));
+        margin-top: calc(20px + (30 - 20) * ( (100vw - 320px) / (991.98 - 320)));
     }
 
     // .quiz-plans__list
@@ -435,9 +435,6 @@
         justify-content: center;
     }
 }
-.button-dark {
-}
-
 
 .quiz-range {
     margin-top: 70px;
@@ -514,13 +511,13 @@
 }
 
 .popup-form {
-    margin-top: 50px;
+    margin-top: 30px;
     &__body {
         gap: 24px;
 
         @media (max-width: 1400px) {
-            display: flex;
-            flex-direction: column;
+            //display: flex;
+            //flex-direction: column;
         }
     }
 
@@ -541,6 +538,36 @@
         }
         input {
             width: 100%;
+        }
+    }
+    &__field {
+        gap: 10px;
+    }
+    &__label {
+        font-size: 22px;
+        @media (max-width: 991.98px) {
+            font-size: calc(16px + (22 - 16) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+    }
+
+    &__input {
+        font-size: 20px;
+        @media (max-width: 991.98px) {
+            font-size: calc(16px + (20 - 16) * ( (100vw - 320px) / (991.98 - 320)));
+        }
+        @media (max-width: 1400px) {
+            height: calc(60px + (80 - 60) * ( (100vw - 991.98px) / (1400 - 991.98)));
+            padding-left: calc(24px + (34 - 24) * ( (100vw - 991.98px) / (1400 - 991.98)));
+            padding-right: calc(24px + (34 - 24) * ( (100vw - 991.98px) / (1400 - 991.98)));
+
+            font-size: calc(15px + (24 - 15) * ( (100vw - 991.98px) / (1400 - 991.98)));
+        }
+        @media (max-width: 991.98px) {
+            height: calc(60px + (70 - 60) * ( (100vw - 320px) / (991.98 - 320)));
+            padding-left: calc(24px + (34 - 24) * ( (100vw - 320px) / (991.98 - 320)));
+            padding-right: calc(24px + (34 - 24) * ( (100vw - 320px) / (991.98 - 320)));
+
+            font-size: calc(15px + (24 - 15) * ( (100vw - 320px) / (991.98 - 320)));
         }
     }
 }
